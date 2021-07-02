@@ -32,7 +32,7 @@ class DocsController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     @doc.destroy
     redirect_to docs_path
@@ -43,7 +43,7 @@ class DocsController < ApplicationController
     def find_doc
       @doc = Doc.find(params[:id])
     end
-    
+
     def doc_params
       params.require(:doc).permit(:title, :content)
     end
